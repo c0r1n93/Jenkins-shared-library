@@ -1,5 +1,5 @@
-def call (){
+def call (String containerName, String port, String hostPort, String containerPort, String imageName, String imageTag){
 
-    sh "docker run -d --name alpine -e PORT=80 -p 80:80 alpine_image:1.2"
+    sh "docker run -d --name ${containerName} -e PORT=${port} -p ${hostPort}:${containerPort} ${imageName}:${imageTag}"
     sh 'sleep 5'
 }
