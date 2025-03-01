@@ -1,7 +1,7 @@
-def call (){
+def call (String containerName){
 
 
-    sh "docker rm -f alpine"
+    sh "docker rm -f ${containerName}"
 
 
 }
